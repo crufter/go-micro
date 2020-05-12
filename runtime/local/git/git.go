@@ -160,6 +160,7 @@ func NewGitter(folder string) Gitter {
 	if commandExists("git") {
 		return binaryGitter{folder}
 	}
+	panic("lib gitter being used")
 	return libGitter{folder}
 }
 
